@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5.18 Induction | Induction for the ORCA Transitional Facility</title>
+  <meta name="description" content="5.18 Induction | Induction for the ORCA Transitional Facility" />
+  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5.18 Induction | Induction for the ORCA Transitional Facility" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5.18 Induction | Induction for the ORCA Transitional Facility" />
+  
+  
+  
+
+
+
+<meta name="date" content="2021-09-24" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="04.6-externalTransfer.html"/>
+<link rel="next" href="transFacInduction.html"/>
+<script src="libs/header-attrs-2.8/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
+<script src="libs/leaflet-providers-1.9.0/leaflet-providers_1.9.0.js"></script>
+<script src="libs/leaflet-providers-plugin-2.0.4.1/leaflet-providers-plugin.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.6.1/grViz.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="index.html#section"></a></li>
+<li class="chapter" data-level="1" data-path="0.1_abbreviations.html"><a href="0.1_abbreviations.html"><i class="fa fa-check"></i><b>1</b> Abbreviations</a></li>
+<li class="chapter" data-level="2" data-path="0_ammendments.html"><a href="0_ammendments.html"><i class="fa fa-check"></i><b>2</b> Ammendments</a></li>
+<li class="chapter" data-level="3" data-path="01_Introduction.html"><a href="01_Introduction.html"><i class="fa fa-check"></i><b>3</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="01_Introduction.html"><a href="01_Introduction.html#facilityDetails"><i class="fa fa-check"></i><b>3.1</b> Facility Details</a></li>
+<li class="chapter" data-level="3.2" data-path="01_Introduction.html"><a href="01_Introduction.html#function-of-the-facilty"><i class="fa fa-check"></i><b>3.2</b> Function of the Facilty</a></li>
+<li class="chapter" data-level="3.3" data-path="01_Introduction.html"><a href="01_Introduction.html#mpi-contact-details"><i class="fa fa-check"></i><b>3.3</b> MPI Contact Details</a></li>
+<li class="chapter" data-level="3.4" data-path="01_Introduction.html"><a href="01_Introduction.html#changes-in-tf-management"><i class="fa fa-check"></i><b>3.4</b> Changes in TF Management</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="02-PhysicalStuctural.html"><a href="02-PhysicalStuctural.html"><i class="fa fa-check"></i><b>4</b> Physical and Structural Requirements for TF</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="02-PhysicalStuctural.html"><a href="02-PhysicalStuctural.html#tfLocations"><i class="fa fa-check"></i><b>4.1</b> TF Locations</a></li>
+<li class="chapter" data-level="4.2" data-path="02-PhysicalStuctural.html"><a href="02-PhysicalStuctural.html#offical-signage"><i class="fa fa-check"></i><b>4.2</b> Offical Signage</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html"><i class="fa fa-check"></i><b>5</b> Operational Requirments for TF</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#operator"><i class="fa fa-check"></i><b>5.1</b> Operator</a></li>
+<li class="chapter" data-level="5.2" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#receipt-management-and-transfer-of-uncleared-risk-goods"><i class="fa fa-check"></i><b>5.2</b> Receipt, Management and Transfer of Uncleared Risk Goods</a></li>
+<li class="chapter" data-level="5.3" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#transferring-samples"><i class="fa fa-check"></i><b>5.3</b> Transferring samples</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#external-transfers-of-new-samples-into-the-facility"><i class="fa fa-check"></i><b>5.3.1</b> External Transfers of New Samples into the Facility</a></li>
+<li class="chapter" data-level="5.3.2" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#internal-transfers-of-samples-between-orca-sites"><i class="fa fa-check"></i><b>5.3.2</b> Internal Transfers of Samples between ORCA sites</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#approved-users"><i class="fa fa-check"></i><b>5.4</b> Approved Users</a></li>
+<li class="chapter" data-level="5.5" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#tf-security-and-access"><i class="fa fa-check"></i><b>5.5</b> TF Security and Access</a></li>
+<li class="chapter" data-level="5.6" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#segregation-of-uncleared-risk-goods"><i class="fa fa-check"></i><b>5.6</b> Segregation of Uncleared Risk Goods</a></li>
+<li class="chapter" data-level="5.7" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#additional-record-keeping"><i class="fa fa-check"></i><b>5.7</b> Additional Record Keeping</a></li>
+<li class="chapter" data-level="5.8" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#hygiene-management"><i class="fa fa-check"></i><b>5.8</b> Hygiene Management</a>
+<ul>
+<li class="chapter" data-level="5.8.1" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#biosecurity-equipment"><i class="fa fa-check"></i><b>5.8.1</b> Biosecurity Equipment</a></li>
+<li class="chapter" data-level="5.8.2" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#cleaning"><i class="fa fa-check"></i><b>5.8.2</b> Cleaning</a></li>
+<li class="chapter" data-level="5.8.3" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#biosecurity-waste-disposal"><i class="fa fa-check"></i><b>5.8.3</b> Biosecurity Waste Disposal</a></li>
+</ul></li>
+<li class="chapter" data-level="5.9" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#pests-and-insects"><i class="fa fa-check"></i><b>5.9</b> Pests and Insects</a>
+<ul>
+<li class="chapter" data-level="5.9.1" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#pests"><i class="fa fa-check"></i><b>5.9.1</b> Pests</a></li>
+<li class="chapter" data-level="5.9.2" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#insects"><i class="fa fa-check"></i><b>5.9.2</b> Insects</a></li>
+</ul></li>
+<li class="chapter" data-level="5.10" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#internal-audits"><i class="fa fa-check"></i><b>5.10</b> Internal Audits</a></li>
+<li class="chapter" data-level="5.11" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#contingency-plans"><i class="fa fa-check"></i><b>5.11</b> Contingency Plans</a>
+<ul>
+<li class="chapter" data-level="5.11.1" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#accidental-release-of-uncleared-samples"><i class="fa fa-check"></i><b>5.11.1</b> Accidental Release of Uncleared Samples</a></li>
+<li class="chapter" data-level="5.11.2" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#resignation-of-operator"><i class="fa fa-check"></i><b>5.11.2</b> Resignation of Operator</a></li>
+<li class="chapter" data-level="5.11.3" data-path="03-OperationalRequirments.html"><a href="03-OperationalRequirments.html#accidental-spillage-of-transitional-materal"><i class="fa fa-check"></i><b>5.11.3</b> Accidental Spillage of Transitional Materal</a></li>
+</ul></li>
+<li class="chapter" data-level="5.12" data-path="04.1-geology.html"><a href="04.1-geology.html"><i class="fa fa-check"></i><b>5.12</b> Geology</a></li>
+<li class="chapter" data-level="5.13" data-path="04.2-ORCA.html"><a href="04.2-ORCA.html"><i class="fa fa-check"></i><b>5.13</b> Otago Repository for Core Analysis</a></li>
+<li class="chapter" data-level="5.14" data-path="04.3-cleaning.html"><a href="04.3-cleaning.html"><i class="fa fa-check"></i><b>5.14</b> Cleaning Procedures for Transitional Material</a>
+<ul>
+<li class="chapter" data-level="5.14.1" data-path="04.3.1-cleaningSpill.html"><a href="04.3.1-cleaningSpill.html"><i class="fa fa-check"></i><b>5.14.1</b> Cleaning a spill</a></li>
+<li class="chapter" data-level="5.14.2" data-path="04.3.2-cleaningSplitter.html"><a href="04.3.2-cleaningSplitter.html"><i class="fa fa-check"></i><b>5.14.2</b> Cleaning core splitter</a></li>
+<li class="chapter" data-level="5.14.3" data-path="04.3.3-cleaningCuration.html"><a href="04.3.3-cleaningCuration.html"><i class="fa fa-check"></i><b>5.14.3</b> Core Curation and Clean Up</a></li>
+</ul></li>
+<li class="chapter" data-level="5.15" data-path="04.4-internalAudit.html"><a href="04.4-internalAudit.html"><i class="fa fa-check"></i><b>5.15</b> Internal Audit Checklist for Transitional Facilities</a></li>
+<li class="chapter" data-level="5.16" data-path="04.5-internalTransfer.html"><a href="04.5-internalTransfer.html"><i class="fa fa-check"></i><b>5.16</b> Internal Transfer Form</a></li>
+<li class="chapter" data-level="5.17" data-path="04.6-externalTransfer.html"><a href="04.6-externalTransfer.html"><i class="fa fa-check"></i><b>5.17</b> External Transfer Form</a></li>
+<li class="chapter" data-level="5.18" data-path="04.7-induction.html"><a href="04.7-induction.html"><i class="fa fa-check"></i><b>5.18</b> Induction</a></li>
+<li class="chapter" data-level="5.19" data-path="transFacInduction.html"><a href="transFacInduction.html"><i class="fa fa-check"></i><b>5.19</b> Why do we have a Transitional Facility?</a></li>
+<li class="chapter" data-level="5.20" data-path="transFacInduction.html"><a href="transFacInduction.html#legislation-and-standards"><i class="fa fa-check"></i><b>5.20</b> Legislation and Standards</a></li>
+<li class="chapter" data-level="5.21" data-path="transFacInduction.html"><a href="transFacInduction.html#contacts"><i class="fa fa-check"></i><b>5.21</b> Contacts</a></li>
+<li class="chapter" data-level="5.22" data-path="transFacInduction.html"><a href="transFacInduction.html#transitional-facility-sites"><i class="fa fa-check"></i><b>5.22</b> Transitional Facility Sites</a></li>
+<li class="chapter" data-level="5.23" data-path="transFacInduction.html"><a href="transFacInduction.html#facility-access---masterlock-enterprises"><i class="fa fa-check"></i><b>5.23</b> Facility Access - Masterlock Enterprises</a></li>
+<li class="chapter" data-level="5.24" data-path="transFacInduction.html"><a href="transFacInduction.html#facility-access---entry-log"><i class="fa fa-check"></i><b>5.24</b> Facility Access - Entry Log</a></li>
+<li class="chapter" data-level="5.25" data-path="transFacInduction.html"><a href="transFacInduction.html#facility---general"><i class="fa fa-check"></i><b>5.25</b> Facility - General</a></li>
+<li class="chapter" data-level="5.26" data-path="transFacInduction.html"><a href="transFacInduction.html#facility---fire-escapes-and-toilets"><i class="fa fa-check"></i><b>5.26</b> Facility - Fire Escapes and Toilets</a></li>
+<li class="chapter" data-level="5.27" data-path="transFacInduction.html"><a href="transFacInduction.html#users-not-using-transitional-material-can-now-complete-the-questionnaire-and-leave"><i class="fa fa-check"></i><b>5.27</b> Users not using Transitional Material Can Now Complete The Questionnaire and Leave</a></li>
+<li class="chapter" data-level="5.28" data-path="transFacInduction.html"><a href="transFacInduction.html#transitonal-material"><i class="fa fa-check"></i><b>5.28</b> Transitonal Material</a></li>
+<li class="chapter" data-level="5.29" data-path="transFacInduction.html"><a href="transFacInduction.html#good-work-practices"><i class="fa fa-check"></i><b>5.29</b> Good Work Practices</a></li>
+<li class="chapter" data-level="5.30" data-path="transFacInduction.html"><a href="transFacInduction.html#importation-of-transitional-material"><i class="fa fa-check"></i><b>5.30</b> Importation of Transitional Material</a></li>
+<li class="chapter" data-level="5.31" data-path="transFacInduction.html"><a href="transFacInduction.html#biosecurity-authority-clearance-certificate"><i class="fa fa-check"></i><b>5.31</b> Biosecurity Authority Clearance Certificate</a></li>
+<li class="chapter" data-level="5.32" data-path="transFacInduction.html"><a href="transFacInduction.html#arrival-checklist"><i class="fa fa-check"></i><b>5.32</b> Arrival Checklist</a></li>
+<li class="chapter" data-level="5.33" data-path="transFacInduction.html"><a href="transFacInduction.html#internal-transfers"><i class="fa fa-check"></i><b>5.33</b> Internal Transfers</a></li>
+<li class="chapter" data-level="5.34" data-path="transFacInduction.html"><a href="transFacInduction.html#spills"><i class="fa fa-check"></i><b>5.34</b> Spills</a></li>
+<li class="chapter" data-level="5.35" data-path="transFacInduction.html"><a href="transFacInduction.html#decontamination"><i class="fa fa-check"></i><b>5.35</b> Decontamination</a></li>
+<li class="chapter" data-level="5.36" data-path="transFacInduction.html"><a href="transFacInduction.html#transitional-material-induction-form"><i class="fa fa-check"></i><b>5.36</b> Transitional Material Induction Form</a></li>
+<li class="chapter" data-level="5.37" data-path="transFacInduction.html"><a href="transFacInduction.html#useful-links"><i class="fa fa-check"></i><b>5.37</b> Useful Links</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Induction for the ORCA Transitional Facility</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="induction" class="section level2" number="5.18">
+<h2><span class="header-section-number">5.18</span> Induction</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="04.7-induction.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#htmltools::includeHTML(&quot;F:/OneDrive - University of Otago/Work/ORCA/transitionalFacility/Manual/transFacInduction_230321/transFacInduction.html&quot;)</span></span>
+<span id="cb2-2"><a href="04.7-induction.html#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="04.7-induction.html#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#test&lt;-pdftools::pdf_convert(&quot;F:/OneDrive - University of Otago/Work/ORCA/transitionalFacility/Manual/transFacInduction_230321/transFacInduction.pdf&quot;, dpi=300, pages = 2)</span></span>
+<span id="cb2-4"><a href="04.7-induction.html#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="04.7-induction.html#cb2-5" aria-hidden="true" tabindex="-1"></a>magick<span class="sc">::</span><span class="fu">image_read_pdf</span>(<span class="st">&quot;F:/OneDrive - University of Otago/Work/ORCA/transitionalFacility/Manual/transFacInduction_230321/transFacInduction.pdf&quot;</span>)</span></code></pre></div>
+<p><img src="transFacManV4_files/figure-html/unnamed-chunk-5-1.png" width="756" /></p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="04.6-externalTransfer.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="transFacInduction.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["transFacManV4.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
